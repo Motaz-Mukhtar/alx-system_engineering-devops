@@ -1,3 +1,2 @@
 #!/bin/bash
-cd /root
-ls alx-system_engineering-devops
+ls /root/alx-system_engineering-devops
