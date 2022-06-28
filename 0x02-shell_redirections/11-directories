@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -lra | head -n 1
+ls -lra | wc -l
