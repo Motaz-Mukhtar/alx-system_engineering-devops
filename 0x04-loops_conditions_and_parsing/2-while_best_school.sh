@@ -4,5 +4,5 @@ n=1
 while [ $n -le 10 ]
 do
 	echo "Best School"
-	(( i++ ))
+	(( n++ ))
 done
