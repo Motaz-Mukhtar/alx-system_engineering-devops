@@ -6,3 +6,4 @@ do
 	echo "Best School"
 	(( n++ ))
 done
+echo
