@@ -3,5 +3,9 @@
 
 for i in {1..10}
 do
-	echo "Best School"
+	echo -n "Best School"
+	if [ $i -le 9 ]
+	then
+		echo
+	fi
 done
