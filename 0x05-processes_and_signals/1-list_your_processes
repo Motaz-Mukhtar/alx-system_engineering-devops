@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 # Displays a list of cuurently running processes.
-ps aux
+ps axjf
