@@ -1,3 +1,6 @@
 #!/usr/bin/env bash
 # Stops 4-to_infinity_and_beyond process.
-kill SIGSTOP 4-to_infinty_and_beyond
+
+PID=$( pgrep -f 4-to_infinity_and_beyond )
+
+kill SIGSTOP $PID
