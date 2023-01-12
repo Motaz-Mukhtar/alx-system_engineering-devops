@@ -6,7 +6,7 @@
 apt-get update
 apt-get install -y nginx
 
-mkdir -p /etc/nginx/www/html
+mkdir -p /etc/nginx/html
 touch /etc/nginx/html/index.html
 touch /etc/nginx/html/404.html
 
