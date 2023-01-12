@@ -1,1 +1,6 @@
 
+
+StrictHostKeyChecking no
+TCPKeepAlive yes
+Tunnel yes
+TunnelDevice  no
