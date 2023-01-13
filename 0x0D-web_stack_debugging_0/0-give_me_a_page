@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
 # return a page that contains Hello Holberton
-
-sudo echo "ServerName Localhost" >> /etc/apache2.conf
-
+echo "ServerName Localhost" >> /etc/apache2.conf
 service apache2 restart
