@@ -3,7 +3,7 @@
 # Distribute requests using a roundrobin algorithm
 
 apt-get install -y software-properties-common
-add-apt-repository ppa:vbernat/haproxy-2.6
+add-apt-repository -y ppa:vbernat/haproxy-2.6
 
 apt-get update
 
