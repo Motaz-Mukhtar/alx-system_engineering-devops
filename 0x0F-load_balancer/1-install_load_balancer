@@ -12,7 +12,7 @@ apt-get install -y haproxy=2.6.\*
 echo "ENABLED=1" >> /etc/default/haproxy
 
 mv /etc/haproxy/haproxy.cfg{,.original}
-
+touch /etc/haproxy/haproxy.cfg
 printf %s "
 global
 	log 127.0.0.1 local0 notice
