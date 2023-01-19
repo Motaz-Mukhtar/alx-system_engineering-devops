@@ -2,7 +2,7 @@
 # Configure HAproxy so that it send traffic to web-01 and web-02
 # Distribute requests using a roundrobin algorithm
 
-apt-get install -y --no-install-recommends software-properties-common
+apt-get install -y software-properties-common
 add-apt-repository ppa:vbernat/haproxy-2.6
 
 apt-get update
