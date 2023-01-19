@@ -5,6 +5,8 @@
 apt-get install -y --no-install-recommends software-properties-common
 add-apt-repository ppa:vbernat/haproxy-2.6
 
+apt-get update
+
 apt-get install -y haprxy=2.5.\*
 
 echo "ENABLED=1" >> /etc/default/haproxy
