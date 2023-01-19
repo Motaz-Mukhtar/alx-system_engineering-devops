@@ -7,7 +7,7 @@ add-apt-repository ppa:vbernat/haproxy-2.6
 
 apt-get update
 
- apt-get install -y haproxy=2.6.\*
+apt-get install -y haproxy=2.6.\*
 
 echo "ENABLED=1" >> /etc/default/haproxy
 
@@ -41,4 +41,5 @@ listen app
 	server 69142-web-01 54.210.177.146:80 check
 	server 69142-web-02 54.209.56.145:80 check
 " >> /etc/haproxy/haproxy.cfg
+
 service haproxy start
