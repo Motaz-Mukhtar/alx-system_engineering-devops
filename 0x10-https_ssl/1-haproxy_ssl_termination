@@ -19,7 +19,7 @@ defaults
         option redispatch
 
 frontend server-https
-        bind    0.0.0.0:443 ssl crt /etc/ssl/www.alxweb-01.tech.pem alpn h2.http/1.1
+        bind    0.0.0.0:443 ssl crt /etc/ssl/private/www.alxweb-01.tech.pem
         http-request add-header X-Forwarded-Proto  https
         acl     letsencrypt-acl path_beg /.well-known/acme-challenge/
         use_backend letsencrypt-server if letsencrypt-acl
