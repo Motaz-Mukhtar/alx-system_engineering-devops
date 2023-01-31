@@ -3,7 +3,7 @@
 
 apt-get upgrade ufw
 
-sed -i "s/IPV6.*/IPV6=yes/" /etc/default/ufw
+sed -i "s/IPV6=.*/IPV6=yes/" /etc/default/ufw
 
 ufw enable
 
