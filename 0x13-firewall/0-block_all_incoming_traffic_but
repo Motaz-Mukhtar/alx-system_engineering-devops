@@ -2,6 +2,8 @@
 
 apt-get upgrade ufw
 
+ufw disable
+ufw enalbe
 
 ufw default deny incoming
 ufw default allow outgoing
