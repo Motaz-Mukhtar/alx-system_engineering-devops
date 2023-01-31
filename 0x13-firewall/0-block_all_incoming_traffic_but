@@ -2,7 +2,8 @@
 
 apt-get upgrade ufw
 
-ufw disable
+sed -i "s/IPV6.*/IPV6=yes/" /etc/default/ufw
+
 ufw enalbe
 
 ufw default deny incoming
