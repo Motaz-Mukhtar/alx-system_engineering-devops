@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 # Conifg Firewall
+#+ and allow 22, 443, 80 prots connections
 
 apt-get upgrade ufw
 
-sed -i "s/IPV6=.*/IPV6=yes/" /etc/default/ufw
+sed -i 's/IPV6=.*/IPV6=yes/' /etc/default/ufw
 ufw disable
 ufw enable
 
