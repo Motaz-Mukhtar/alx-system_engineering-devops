@@ -10,5 +10,4 @@ printf %s "server
 " >> /etc/nginx/nginx.confg
 
 
-sudo -u "nginx" service nginx restart
-
+sudo -u nginx service nginx start
