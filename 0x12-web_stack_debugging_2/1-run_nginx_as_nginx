@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Configures nginx file
+
+
+
+printf %s "server
+	{
+		listen *:8080
+	}
+" >> /etc/nginx/nginx.confg
+
+
+sudo -u "nginx" service nginx restart
+
