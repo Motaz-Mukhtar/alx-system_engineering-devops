@@ -2,8 +2,8 @@
 # Configures nginx file
 
 
-sed -i "#/usr/www-data nginx/" /etc/nginx/nginx.conf
-sed -i "s\80\8080g" /etc/nginx/sites-available/default
+sed -i "s/#user www-data/user nginx/" /etc/nginx/nginx.conf
+sed -i "s/80/8080g" /etc/nginx/sites-available/default
 
 chmod 644 /etc/nginx/nginx.conf
 pkill apache2
