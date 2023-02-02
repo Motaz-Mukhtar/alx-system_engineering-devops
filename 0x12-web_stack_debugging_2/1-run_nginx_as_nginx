@@ -2,9 +2,9 @@
 # Configures nginx file
 
 
-sed -i "#/usr/www-data nginx/" /etc/nginx/nginx.confg
+sed -i "#/usr/www-data nginx/" /etc/nginx/nginx.conf
 sed -i "s\80\8080g" /etc/nginx/sites-available/default
 
-chmod 664 /etc/nginx/nginx.confg
+chmod 644 /etc/nginx/nginx.conf
 pkill apache2
 sudo -u nginx service nginx start
