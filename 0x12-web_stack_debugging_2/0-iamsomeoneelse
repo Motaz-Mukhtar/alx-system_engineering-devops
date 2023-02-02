@@ -2,6 +2,6 @@
 # Run the woami command under the
 #+ passed as an argument
 
-sudo su $1
+sudo su '$1'
 whoami
 sudo su
