@@ -13,11 +13,12 @@ if __name__ == "__main__":
     user = requests.get(url + "users/{}".format(user_id))
 
     for obj in todos.json():
-        my_list.append(obj.get('title'))
         if obj.get('completed') is True:
             completed = completed + 1
+            my_list.append(obj.get('title'))
     username = user.json().get('name')
     emp = "Emplyee {} is done with tasks ".format(username)
     print(emp + "({}/{}):".format(completed, len(todos.json())))
     for title in my_list:
         print('\t', title)
+
