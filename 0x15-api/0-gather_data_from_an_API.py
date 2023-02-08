@@ -14,10 +14,9 @@ if __name__ == "__main__":
 
     for obj in todos.json():
         if obj.get('completed') is True:
-            completed = completed + 1
             my_list.append(obj.get('title'))
     username = user.json().get('name')
-    emp = "Emplyee {} is done with tasks ".format(username)
-    print(emp + "({}/{}):".format(completed, len(todos.json())))
+    emp = "Employee {} is done with tasks ".format(username)
+    print(emp + "({}/{}):".format(len(my_list), len(todos.json())))
     for title in my_list:
         print('\t', title)
