@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """ Returns information about his/her TODO list progress. """
-import csv
+import json
 import requests
 import sys
 
 
 if __name__ == "__main__":
-    completed = 0
+    my_list = []
     url = "https://jsonplaceholder.typicode.com/"
     user_id = sys.argv[1]
     todos = requests.get(url + "todos", params={"userId": user_id}).json()
@@ -14,8 +14,11 @@ if __name__ == "__main__":
     username = username.get('username')
     user_id = sys.argv[1]
 
-    with open('{}.csv'.format(user_id), 'w', newline="") as f:
-        write = csv.writer(f, quoting=csv.QUOTE_ALL)
-
-        [write.writerow([user_id, username, i.get("completed"),
-                        i.get("title")]) for i in todos]
+    with open('{}.json'.format(user_id), 'w') as f:
+        for obj in todos:
+            my_dict = {}
+            my_dict['task'] = obj.get('title')
+            my_dict['completed'] = obj.get('completed')
+            my_dict['username'] = username
+            my_list.append(my_dict)
+        f.write(json.dumps({user_id: my_list}))
