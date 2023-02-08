@@ -6,17 +6,16 @@ import sys
 
 if __name__ == "__main__":
     completed = 0
+    url = "https://jsonplaceholder.typicode.com"
     my_list = []
-    todos = requests.get(f"https://jsonplaceholder.typicode.com/\
-                         todos?userId={sys.argv[1]}")
-    user = requests.get(f"https://jsonplace\
-                        holder.typicode.com/users/{sys.argv[1]}")
+    todos = requests.get(url + "/todos?userId={}".format(sys.argv[1]))
+    user = requests.get(url + "/users/{}".format(sys.argv[1]))
     for obj in todos.json():
-        my_list.append(obj['title'])
-        if obj['completed'] is True:
+        my_list.append(obj.get('title'))
+        if obj.get('completed') is True:
             completed = completed + 1
-    username = user.json()['name']
-    print("Employee {} is done with tasks({\
-          }/{}):".format(username, completed, len(todos.json())))
+    username = user.json().get('name')
+    emp = "Emplyee {} is done with tasks ".format(username)
+    print(emp + "({}/{}):".format(completed, len(todos.json())))
     for title in my_list:
         print('\t', title)
