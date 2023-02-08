@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-""" Returns information about his/her TODO list progress. """
+"""
+    Records all tasks that are owned by this emplyee
+    stor this Records at CSV file with user id
+"""
 import csv
 import requests
 import sys
