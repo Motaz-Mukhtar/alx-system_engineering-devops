@@ -21,4 +21,3 @@ if __name__ == "__main__":
     print(emp + "({}/{}):".format(completed, len(todos.json())))
     for title in my_list:
         print('\t', title)
-
