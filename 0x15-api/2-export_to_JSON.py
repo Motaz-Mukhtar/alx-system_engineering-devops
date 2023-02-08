@@ -2,15 +2,17 @@
 """ Export data in the CSV format. """
 import requests
 import sys
+import json
 
 
 if __name__ == "__main__":
+    completed = 0
     url = "https://jsonplaceholder.typicode.com"
     todos = requests.get(url + "/todos?userId={}".format(sys.argv[1]))
     user = requests.get(url + "/users/{}".format(sys.argv[1]))
     username = user.json().get('username')
 
-    with open(f'{sys.argv[1]}.csv', mode='w') as f:
+    with open(f'{sys.argv[1]}.json', mode='w') as f:
         for obj in todos.json():
             completed = obj.get('completed')
             title = obj.get('title')

@@ -6,10 +6,12 @@ import sys
 
 if __name__ == "__main__":
     completed = 0
-    url = "https://jsonplaceholder.typicode.com"
+    url = "https://jsonplaceholder.typicode.com/"
     my_list = []
-    todos = requests.get(url + "/todos?userId={}".format(sys.argv[1]))
-    user = requests.get(url + "/users/{}".format(sys.argv[1]))
+    user_id = sys.argv[1]
+    todos = requests.get(url + "todos", params={"userId": user_id})
+    user = requests.get(url + "users/{}".format(user_id))
+
     for obj in todos.json():
         my_list.append(obj.get('title'))
         if obj.get('completed') is True:
