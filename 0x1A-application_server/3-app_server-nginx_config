@@ -1,7 +1,6 @@
-#!/usr/bin/env bash
 # Configure Nginx to serve page from the route /airbnb-onepage/
 
-printf %s "server{
+server {
         listen          80 default_server;
         listen          [::]:80 default_server;
         root            /var/www/html;
@@ -30,6 +29,4 @@ printf %s "server{
 	}
 
         add_header X-Served-By '${HOST}';
-}" > /etc/nginx/sites-available/default
-
-sudo service nginx restart
+}
