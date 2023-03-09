@@ -1,4 +1,4 @@
-Configures Nginx to serve the /number_odd_or_even/ route
+# Configures Nginx to serve the /number_odd_or_even/ route
 
 server {
     # Listen on port 80
