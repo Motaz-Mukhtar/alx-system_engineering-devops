@@ -5,7 +5,7 @@ server {
         listen          [::]:80 default_server ipv6only=on;
         root            /var/www/html;
         index           index.html index.htm;
-	server_name 	54.210.177.146;        
+	server_name 	54.210.177.146;
 
 	location /redirect_me {
                 return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
@@ -23,7 +23,7 @@ server {
         }
 
         location /airbnb-onepage/ {
-                proxy_pass http://0.0.0.0:5000/airbnb-onepage;
+                proxy_pass http://0.0.0.0:5000/airbnb-onepage/;
         }
 
         add_header X-Served-By ${HOST};
