@@ -1,7 +1,7 @@
 # Configure Nginx to serve page from the route /airbnb-onepage/
 
 server {
-        listen          80 default_server;
+	listen          80 default_server;
         listen          [::]:80 default_server ipv6only=on;
 	server_name 	54.210.177.146;
 
