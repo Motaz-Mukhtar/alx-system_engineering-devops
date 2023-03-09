@@ -6,6 +6,6 @@ exec {'fix_nginx_config_file':
 }
 
 exec {'restart_nginx_server':
-  command => 'service nginx restart',
-  path    => 'usr/bin/local/:/bin',
+  command => 'nginx restart',
+  path    => '/etc/init.d',
 }
